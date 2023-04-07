@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -18,11 +19,23 @@ public class PatientVisits {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Integer id;
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     Date visitDate;
-    Integer height;
-    Integer weight;
-    BigDecimal bmiCalculation;
     @Column
     String patientNumber;
+    @Column
+    String patientName;
+    @Column
+    String bmiStatus;
+    @Column
+    String age;
+    @Column
+    String healthStatus;
+    @Column
+    String takingDrugs;
+
+    @Column
+    Boolean isDieting;
+
 }
