@@ -32,19 +32,12 @@ class Register extends Component {
         event.preventDefault();
 
 
-        // calculate the BMI::>>
-        var bmiResult = (parseFloat(this.state.weight) * 10000) / (parseFloat(this.state.height) * parseFloat(this.state.height));
-        bmiResult = bmiResult.toFixed(2);
-
         const patient = {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             dob: this.state.dob,
             gender: this.state.gender,
-            // height: this.state.height,
-            // weight: this.state.weight,
-            patientNumber: "INC".concat(Math.floor(Math.random() * 89999 + 100000)),
-            // bmiCalculation: bmiResult
+            patientNumber: "INC".concat(Math.floor(Math.random() * 89999 + 100000)), //Dynamically generated unique patientNumber will asssist to identify patient in the reports & visits
         };
 
         const requestOptions = {
