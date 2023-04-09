@@ -29,6 +29,6 @@ The endpoints defined in the `PatientController` class are:
 
 For the front-end:
 
--open the `intellisoft-clientside` folder on your terminal
--run `npm install` from root of the folder
--run `npm start` and the application will run on port `3000` in your browser i.e: `http://localhost:3000/`
+- open the `intellisoft-clientside` folder on your terminal
+- run `npm install` from root of the folder
+- run `npm start` and the application will run on port `3000` in your browser i.e: `http://localhost:3000/`
